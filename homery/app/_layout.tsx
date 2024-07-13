@@ -4,6 +4,8 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
+import { View, Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -25,10 +27,15 @@ export default function RootLayout() {
   }
 
   return (
+
+    // <SafeAreaView>
+    //   <Text>Hello world</Text>
+    // </SafeAreaView>
    
-      <Stack>
-        <Stack.Screen  name="(tabs)" options={{ headerShown: false }} />
-        
+      <Stack screenOptions={{
+        headerShown:false
+      }}>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       </Stack>
     
   );

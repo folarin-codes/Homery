@@ -1,11 +1,12 @@
-import { Stack } from "expo-router";
+import { Tabs } from "expo-router";
 
 const TabLayout = ()=>{
     return(
-        <Stack>
-            <Stack.Screen name='name'/>
+        <Tabs screenOptions={{headerShown:false}}> 
+            <Tabs.Screen name='home' options={{headerShown:false}}/>
+            <Tabs.Screen name="about"/>
 
-        </Stack>
+        </Tabs>
 
     )
 };
